@@ -3,13 +3,11 @@ package util;
 public class Constant {
 	public static String BASEDIR = "D:/Data/GIA/output";
 
-	public static String FILE_UPCC = BASEDIR + "/ref/in/upcc";
+	public static String SOURCE = BASEDIR + "/ref/digipos/source";
 
-	public static String FILE_LACIMA_3G = BASEDIR + "/ref/v_par_ref_lacima.csv";
-	public static String FILE_LACIMA_4G = BASEDIR
-			+ "/ref/v_par_ref_lacima_4g.csv";
+	public static String REF_BLACKLIST = BASEDIR + "/ref/digipos/blacklist";
 
-	public static String OUTPUT = BASEDIR + "/out/upcc_summary.csv";
+	public static String OUTPUT = BASEDIR + "/ref/digipos/out/summary.csv";
 
 	public static String joinRule(String in, int length) {
 		int gap = length - in.length();
