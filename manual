@@ -1,0 +1,11 @@
+##### flink #####
+DATE_NOW="$(date +'%Y%m%d_%H%M%S')"
+SLOT=10
+SINK=1
+FLINK=/home/gedeys/emirdon/apps/flink-1.3.2/bin/flink
+FLINK_JAR=/home/gedeys/emirdon/flink_digipos.jar
+INPUT_DIR=/data/DO/DO_ALL
+OUTPUT=/home/gedeys/emirdon/out/flink_digipos_${DATE_NOW}.csv
+REF_BLACKLIST=/data/ALL_BLACKLIST_sorted
+
+${FLINK} run ${FLINK_JAR} -slot ${SLOT} -sink ${SINK} -source ${INPUT_DIR} -ref_blacklist ${REF_BLACKLIST} -output ${OUTPUT}
